@@ -1,0 +1,53 @@
+.container {
+  position: absolute;
+  width: 902px;
+  height: 221px;
+  top: 32px;
+  left: 80px;
+  .window {
+    width: 100%;
+    height: 100%;
+  }
+  .btn-container {
+    box-sizing: border-box;
+    width: 154px;
+    height: 63px;
+    position: relative;
+    transition: all 200ms ease-in-out;
+    background-image: url(@/assets/AddWindow/btn.png);
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    .btn-icon {
+      position: static;
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+    span {
+      flex: 1;
+    }
+    .btn-item-img {
+      top: -34px;
+      left: 60px;
+      width: 114px;
+      height: 114px;
+      z-index: 1;
+      transition: all 500ms ease-in-out;
+    }
+  }
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.item-btns {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-around;
+  width: 100%;
+}

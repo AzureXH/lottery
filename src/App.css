@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url("./assets/fonts/DFPShaoNvW5-GB.ttf") format("truetype");
+}
+
+body {
+  font-family: "MyFont", sans-serif;
+  overflow: hidden;
+}
+
+img {
+  pointer-events: none;
+}
