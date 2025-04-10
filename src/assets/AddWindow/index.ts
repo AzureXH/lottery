@@ -5,6 +5,7 @@ import btnIcon from "./btn-icon.png";
 import flower from "./flower.png";
 import rain from "./rain.png";
 import grass from "./grass.png";
+import totalFrame from "./accumulative-frame.png";
 
 export default {
   frame,
@@ -14,4 +15,5 @@ export default {
   flower,
   rain,
   grass,
+  totalFrame,
 };

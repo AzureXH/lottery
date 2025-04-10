@@ -28,7 +28,6 @@ const AddButton = forwardRef(
     ref: ForwardedRef<AddButtonRef>
   ) => {
     const [style, setStyle] = useState({});
-    const [itemStyle, setItemStyle] = useState({});
     const containerRef = useRef<HTMLDivElement>(null);
     const onTouchStart = () => {
       setStyle({
@@ -74,7 +73,7 @@ const AddButton = forwardRef(
         className={styles["btn-container"]}
       >
         <img src={AddwindowImage.btnIcon} className={styles["btn-icon"]} />
-        <span>{text}</span>
+        <span className="text-[#BC83A3]">{text}</span>
         {itemImg && <img src={itemImg} className={styles["btn-item-img"]} />}
       </div>
     );

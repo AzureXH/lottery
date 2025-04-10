@@ -1,3 +1,8 @@
+@tailwind utilities;
+:root {
+  --tw-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --tw-duration: 200ms;
+}
 * {
   margin: 0;
   padding: 0;
