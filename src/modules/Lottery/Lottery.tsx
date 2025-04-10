@@ -5,11 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import PotAnimation from "@/assets/PotAnimation";
 import AddWindow from "./components/AddWindow";
 import TextTips from "./components/TextTips";
-import { draw, ItemType, ItemTypeMap, RarityLevel } from "@/algorithm/lottery";
+import { draw, ItemType, RarityLevel } from "@/algorithm/lottery";
 import classNames from "classnames";
 import AwardFrame from "./components/AwardFrame";
-import AddWindowImages from "@/assets/AddWindow";
-import imgTest from "../../../design/3-4.png";
 const Background = () => {
   return (
     <>
