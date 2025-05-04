@@ -34,6 +34,7 @@ export default defineConfig({
     imagePathPlugin(),
   ],
   build: {
+    assetsInlineLimit: 0,
     rollupOptions: {
       external: [/\.(png|jpe?g|gif|svg)$/],
     },
