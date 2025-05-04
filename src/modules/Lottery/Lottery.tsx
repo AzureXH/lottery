@@ -11,10 +11,6 @@ import AwardFrame from "./components/AwardFrame";
 const Background = () => {
   return (
     <>
-      {/* <img
-        className={styles["background-test"]}
-        src={LotteryBackground.background}
-      ></img> */}
       <img className={styles.wall} src={LotteryBackground.wall}></img>
       <img className={styles.ground} src={LotteryBackground.ground}></img>
       <img className={styles.candle} src={LotteryBackground.candle}></img>
@@ -285,7 +281,7 @@ const Lottery = ({
       timer = window.setTimeout(() => {
         workingTimes.current++;
         setActionState(nextStateMap[actionState]);
-      }, 1000);
+      }, 500);
     }
     return () => {
       if (timer) {
@@ -296,8 +292,9 @@ const Lottery = ({
   return (
     <div className={styles.page}>
       <Background></Background>
-      {actionState === ActionTree.award && (
-        <div className="absolute top-[32px] left-[32px]">
+      {(actionState === ActionTree.award ||
+        actionState === ActionTree.idle) && (
+        <div className="absolute top-[16px] left-[16px] z-1000">
           <div
             className="relative transition-all w-[100px] h-[60px]"
             style={backIconStyle}
