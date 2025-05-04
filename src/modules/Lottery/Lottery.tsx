@@ -5,18 +5,12 @@ import { useEffect, useRef, useState } from "react";
 import PotAnimation from "@/assets/PotAnimation";
 import AddWindow from "./components/AddWindow";
 import TextTips from "./components/TextTips";
-import { draw, ItemType, ItemTypeMap, RarityLevel } from "@/algorithm/lottery";
+import { draw, ItemType, RarityLevel } from "@/algorithm/lottery";
 import classNames from "classnames";
 import AwardFrame from "./components/AwardFrame";
-import AddWindowImages from "@/assets/AddWindow";
-import imgTest from "../../../design/3-4.png";
 const Background = () => {
   return (
     <>
-      {/* <img
-        className={styles["background-test"]}
-        src={LotteryBackground.background}
-      ></img> */}
       <img className={styles.wall} src={LotteryBackground.wall}></img>
       <img className={styles.ground} src={LotteryBackground.ground}></img>
       <img className={styles.candle} src={LotteryBackground.candle}></img>
@@ -287,7 +281,7 @@ const Lottery = ({
       timer = window.setTimeout(() => {
         workingTimes.current++;
         setActionState(nextStateMap[actionState]);
-      }, 1000);
+      }, 500);
     }
     return () => {
       if (timer) {
@@ -298,8 +292,9 @@ const Lottery = ({
   return (
     <div className={styles.page}>
       <Background></Background>
-      {actionState === ActionTree.award && (
-        <div className="absolute top-[32px] left-[32px]">
+      {(actionState === ActionTree.award ||
+        actionState === ActionTree.idle) && (
+        <div className="absolute top-[16px] left-[16px] z-1000">
           <div
             className="relative transition-all w-[100px] h-[60px]"
             style={backIconStyle}
