@@ -23,7 +23,7 @@ export enum ItemType {
 
   // 超稀有奖池
   SSR_Bento = "SSR_Bento",
-  SSR_Taro = "SSR_Taro",
+  SSR_Massage = "SSR_Massage",
 }
 
 export const ItemTypeMap = {
@@ -43,7 +43,7 @@ export const ItemTypeMap = {
 
   // 超稀有奖池
   SSR_Bento: { label: "便当券", value: ItemType.SSR_Bento },
-  SSR_Taro: { label: "占卜券", value: ItemType.SSR_Taro },
+  SSR_Massage: { label: "按摩券", value: ItemType.SSR_Massage },
 };
 
 // 单抽全局概率配置
@@ -74,8 +74,8 @@ const SINGLE_DRAW_CONFIG = {
   [RarityLevel.SSR]: {
     probability: 1,
     items: [
-      { type: ItemType.SSR_Bento, ratio: 50 }, // 0.5%
-      { type: ItemType.SSR_Taro, ratio: 50 }, // 0.5%
+      { type: ItemType.SSR_Bento, ratio: 20 }, // 0.5%
+      { type: ItemType.SSR_Massage, ratio: 80 }, // 0.5%
     ],
   },
 };
@@ -108,8 +108,8 @@ const MULTI_DRAW_POOLS = {
   [RarityLevel.SSR]: {
     probability: 1,
     items: [
-      { type: ItemType.SSR_Bento, ratio: 50 },
-      { type: ItemType.SSR_Taro, ratio: 50 },
+      { type: ItemType.SSR_Bento, ratio: 20 },
+      { type: ItemType.SSR_Massage, ratio: 80 },
     ],
   },
 };
@@ -221,10 +221,10 @@ function multiDraw(times: number) {
   console.log("抽奖统计：", {
     总次数: times,
     稀有度分布: Object.entries(stats.rarity).map(
-      ([rarity, count]) => `${rarity}: ${((count / times) * 100).toFixed(2)}%`
+      ([rarity, count]) => `${rarity}: ${((count / times) * 100).toFixed(2)}%`,
     ),
     物品分布: Object.entries(stats.items).map(
-      ([item, count]) => `${item}: ${((count / times) * 100).toFixed(2)}%`
+      ([item, count]) => `${item}: ${((count / times) * 100).toFixed(2)}%`,
     ),
     物品列表: results.map((r) => r.item),
   });

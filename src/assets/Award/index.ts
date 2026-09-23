@@ -18,7 +18,7 @@ import SR_Star from "./SR/star.png";
 
 // SSR级奖励
 import SSR_Bento from "./SSR/bento.png";
-import SSR_Taro from "./SSR/taro.png";
+import SSR_Massage from "./SSR/taro.png";
 import SSR_Star from "./SSR/star.png";
 import { RarityLevel } from "@/algorithm/lottery";
 
@@ -46,7 +46,7 @@ export const AwardImages: Record<
   },
   SSR: {
     SSR_Bento,
-    SSR_Taro,
+    SSR_Massage,
     Star: SSR_Star,
   },
 };
